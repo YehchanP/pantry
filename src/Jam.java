@@ -62,7 +62,7 @@ public class Jam {
     }
 
     public void remove(double amount) {
-        if (amount > this.size) {
+        if (amount > this.size) {//Check if over 0
             System.out.println("Spreading " + this.size + " fluid ounces of " + this.content+"\n");
             this.size = 0;
         } else {
