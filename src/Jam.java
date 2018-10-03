@@ -4,7 +4,7 @@ public class Jam {
     private String date;
     private double size;
 
-    public Jam(String c, String d, double s) {
+    public Jam(String c, String d, double s) {//Constructs a jam jar
         content = c;
         date = d;
         size = s;
@@ -53,29 +53,29 @@ public class Jam {
     }
 
     public boolean emptyCheck() {
-        if (this.size > 0) {
-            return false;
+        if (this.size > 0) {//If it has anything in the jar left
+            return false;   //Returns false
         } else {
-            return true;
+            return true;//Returns true if it is less than 0
         }
         
     }
 
     public void remove(double amount) {
-        if (amount > this.size) {//Check if over 0
-            System.out.println("Spreading " + this.size + " fluid ounces of " + this.content+"\n");
-            this.size = 0;
-        } else {
-            System.out.println("Spreading " + amount + " fluid ounces of " + this.content+"\n");
-            this.size -= amount;
+        if (amount > this.size) {//Check if amount is over 0
+            System.out.println("Spreading " + this.size + " fluid ounces of " + this.content+"\n");//If so spreads all that is in the jar
+            this.size = 0;//Jar is empty since everything was spread
+        } else {//If there would be left over
+            System.out.println("Spreading " + amount + " fluid ounces of " + this.content+"\n");//Says it spreads the amount wanted
+            this.size -= amount;//Subtracts it from the jar
         }
-        if (emptyCheck()){
-            System.out.println("No jam in the jar!\n");
+        if (emptyCheck()){//Check if jar is empty
+            System.out.println("No jam in the jar!\n");//If true it outputs this
         }
     }
 
     public void displayJam() {
-        System.out.println(this.content + "     " + this.date + "     " + this.size + " fl. oz.");
+        System.out.println(this.content + "     " + this.date + "     " + this.size + " fl. oz.");//Displays parts of jam
     }
 
 }
